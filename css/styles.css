@@ -75,7 +75,21 @@
 
 .logo-icon { 
     animation: fade-in-left-alternate 2s ease-in-out 0s infinite alternate none; 
-}    
+}
+
+.header .iconos{
+    transform: scale(0.6); /*transforma el tamaño de los iconos en un 60%*/
+    display: flex;
+    margin-top: 10px;
+    object-fit: contain;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: right;
+    margin-right: -20px; /*empuja hacia el margen derecho*/
+    margin-left: auto; /*empuja los iconos a la derecha*/
+    z-index: 2;
+
+}
 
 /*revista */
 .revista-item {
@@ -186,7 +200,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* modificar aca la posicion de la flor*/
+    z-index: 0; /* modificar aca la posicion de la flor*/
 }
 
 .container #rotatingImage {
