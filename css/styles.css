@@ -117,14 +117,22 @@
 }
 
 /*revista */
+
+.contenido{
+    width:fit-content;padding: 1%;
+}
 #revista p{
     margin-left: 20px;
-    padding: 1%;
     font-family: "Gentium Book Plus", serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 35.16px;
     letter-spacing: 0%;
+    text-align: left;
+}
+#revista button{
+    margin-left: 20px;
+    display: block;
 }
 .revista-item {
     position: relative;
@@ -173,6 +181,11 @@
 
 /* General */
 body {
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35.16px;
+    letter-spacing: 0%;
     padding: 0;
     margin: 0; /* eliminamos los margenes por defecto para que no interfiera en el header */
     box-sizing: border-box;
@@ -180,7 +193,27 @@ body {
     color: #000000;
 }    
 
-/* cotenedor del h2 */
+button, form button{
+
+    font-family: "Gentium Book Plus",serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35.16px;
+    letter-spacing: 0%;
+    text-align: left;
+    border: none;
+    width: 261;
+    height: 67;
+    top: 1068px;
+    left: 47px;
+    border-radius: 34px;
+    padding: 10px;
+    gap: 10px;
+    color:  #332B12;
+    background: #CDC491;
+    cursor: pointer;
+}
+/* cotenedor del h2 */ 
 h2{
     box-sizing: border-box;
     width: 100%;
@@ -295,18 +328,13 @@ ul {
     text-align: center;
 }
 
-form input, form button {
+form input {
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-form button {
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-}
 
 /* Footer */
 footer {
