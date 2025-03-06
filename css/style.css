@@ -1,0 +1,336 @@
+.gentium-book-plus-regular {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gentium-book-plus-bold {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gentium-book-plus-regular-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gentium-book-plus-bold-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.header {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+}
+.header .menu ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1%;
+  margin: 0;
+}
+.header .menu ul li {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 35.16px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0 35px;
+  justify-content: center;
+}
+.header .menu ul li a {
+  color: #ffffff;
+  justify-content: center;
+}
+.header .logo {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: left;
+  margin-top: 54px;
+  padding: 10px 100px;
+  background-color: #fff;
+}
+.header .iconos {
+  transform: scale(0.6);
+  display: flex;
+  margin-top: 10px;
+  object-fit: contain;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: right;
+  margin-right: -20px;
+  margin-left: auto;
+  z-index: 2;
+}
+
+.logo-icon {
+  margin-top: 0;
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  z-index: 2;
+  overflow: visible;
+  display: block;
+  animation: fade-in-left-alternate 2s ease-in-out 0s infinite alternate none;
+}
+
+@keyframes fade-in-left-alternate {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.contenido {
+  width: fit-content;
+  padding: 1%;
+}
+
+#revista p {
+  margin-left: 20px;
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35.16px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+#revista button {
+  margin-left: 20px;
+  display: block;
+}
+
+.revista-item {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  padding: 0;
+}
+.revista-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.revista-item .revista-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(225, 18, 18, 0.353);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.revista-item .revista-overlay span {
+  color: rgb(10, 7, 7);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.revista-item .revista-link {
+  color: inherit;
+}
+.revista-item:hover .revista-overlay {
+  opacity: 1;
+}
+.revista-item:hover img {
+  animation: jello-horizontal 1.9s linear both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+body {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35.16px;
+  letter-spacing: 0%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000;
+}
+
+button,
+form button {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35.16px;
+  letter-spacing: 0%;
+  text-align: left;
+  border: none;
+  width: 261px;
+  height: 67px;
+  border-radius: 34px;
+  padding: 10px;
+  gap: 10px;
+  color: #332B12;
+  background: #CDC491;
+  cursor: pointer;
+}
+
+h2 {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  margin-top: 54px;
+  background-color: #000;
+}
+
+h1,
+h2 {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 35.16px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-indent: 20px;
+  color: #fff;
+}
+
+a {
+  margin-top: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: visible;
+}
+.hero .hero-content {
+  position: absolute;
+}
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 3px #000;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+.hero p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.container {
+  position: fixed;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.container #rotatingImage {
+  width: 30%;
+  height: auto;
+  transform-origin: center center;
+  transition: transform 0.01s linear;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+.grid-container {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.playlist .grid-container {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.item,
+.playlist {
+  margin: 20px 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+form input {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */
