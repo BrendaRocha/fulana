@@ -1,5 +1,6 @@
 
 $colorSeccion:#000;
+$colorFondo:#fff;
 // ====================
 // Font Styles
 // ====================
@@ -121,25 +122,69 @@ $colorSeccion:#000;
   // carrousel
   //=================
   .carrousel{
+
     width: 100%;
     max-width: 120em;
     background-color: black;
+    padding: 2em;
+
     .grande{
+
       width: 400%;
-      background-color: chartreuse;
+      background-color: $colorFondo;
 
       display: flex;
       flex-flow: row nowrap;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items:center;
+
+      transition: all .5s ease;
+      transform: translateX(0%);
       img{
         width: calc(100% /4);
-
+        max-height: 80vh;
+        height: auto;
+        object-fit: contain;
+        margin: 1em;
       }
-
+    }
+    .flecha {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      color: grey;
+      cursor: pointer;
+      z-index: 10;
+      padding: 0 1rem;
+    }
+    .izq {
+      left: 0;
+    }
+    .der {
+      right: 0;
     }
     .puntos{
+
+      width: 100%;
+      padding: 1em;
+      background-color: #000;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items:center;
+
       .punto{
+        width: 1em;
+        height: 1em;
+        background-color: white;
+        margin: 1em;
+      }
+      .punto.activo{
+        background-color: aqua;
 
       }
     }

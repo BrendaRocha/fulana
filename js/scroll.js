@@ -1,19 +1,19 @@
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
+
 //---------------
-//   swiper
+//   carrousel
 //---------------
-var swiper = new Swiper(".mySwiper", {
-    loop: true, // Hace que el carrusel sea infinito
-    navigation: { // Agrega botones de siguiente y anterior
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: { // Agrega puntos de paginación
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+const grande = document.querySelector(".grande")
+const punto = document.querySelectorAll(".punto")
+
+punto.forEach( (cadaPunto, i)=>{
+    punto[i].addEventListener("click",()=>{
+
+        let posicion = i 
+        let operacion = posicion * -25
+
+        grande.style.transform =`translateX( ${operacion}%)`
+    })
+})
 //----------
 //  scroll
 //----------
@@ -51,4 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
 //        var rotation = scrollPosition % 360;
 //        document.getElementById('rotatingImage').style.transform = 'rotate(' + rotation + 'deg)';
 //    });
-//});
+// });
