@@ -1,4 +1,22 @@
-
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
+//---------------
+//   swiper
+//---------------
+var swiper = new Swiper(".mySwiper", {
+    loop: true, // Hace que el carrusel sea infinito
+    navigation: { // Agrega botones de siguiente y anterior
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: { // Agrega puntos de paginación
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+//----------
+//  scroll
+//----------
 document.addEventListener('DOMContentLoaded', function() {
     // Obtener todas las secciones
     const sections = document.querySelectorAll('.section-scroll');
@@ -23,13 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
+
+//document.addEventListener('DOMContentLoaded', function() {
     // Código existente del Intersection Observer sin cambios...
     
     // Modificar la función de rotación
-    window.addEventListener('scroll', function() {
-        var scrollPosition = window.scrollY;
-        var rotation = scrollPosition % 360;
-        document.getElementById('rotatingImage').style.transform = 'rotate(' + rotation + 'deg)';
-    });
-});
+//    window.addEventListener('scroll', function() {
+//        var scrollPosition = window.scrollY;
+//        var rotation = scrollPosition % 360;
+//        document.getElementById('rotatingImage').style.transform = 'rotate(' + rotation + 'deg)';
+//    });
+//});
