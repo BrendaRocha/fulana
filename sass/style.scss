@@ -348,6 +348,7 @@ $colorFondo:#fff;
  
   body{ background-color: #000;}
   .star {
+    z-index: 11;
     position: fixed;
     pointer-events: none;
   }
@@ -394,6 +395,10 @@ $colorFondo:#fff;
       
       padding: 1%;
       margin-bottom:0 ;
+    }
+    .banner{
+      justify-content: center;
+      text-align: center;
     }
     
   }

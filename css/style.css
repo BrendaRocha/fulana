@@ -299,6 +299,7 @@ body {
 }
 
 .star {
+  z-index: 11;
   position: fixed;
   pointer-events: none;
 }
@@ -343,6 +344,10 @@ body p {
   letter-spacing: 0%;
   padding: 1%;
   margin-bottom: 0;
+}
+body .banner {
+  justify-content: center;
+  text-align: center;
 }
 
 button {
