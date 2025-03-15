@@ -165,7 +165,7 @@ $colorFondo:#fff;
       color: $colorSeccion;
       cursor: pointer;
       z-index: 10;
-      padding: 0 1rem;
+      padding: 0;
     }
     .izq {
       left: 0;
@@ -173,28 +173,34 @@ $colorFondo:#fff;
     .der {
       right: 0;
     }
-   
-    // Media queries para responsividad
-    @media (max-width: 900px) {
-      .grande {
-        width: calc(100% * 4 / 2); // 2 imágenes visibles
-        a {
-          flex: 0 0 calc(100% / 2);
-        }
+  }
+  
+   // Media queries para responsividad
+   @media (max-width: 900px) {
+     .grande {
+       width: calc(100% * 4 / 2); // 2 imágenes visibles
+       a {
+         flex: 0 0 calc(100% / 2);
+       }
       }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 360px) {
+     
       .grande {
         width: calc(100% * 4 / 1); // 1 imagen visible
-        a {
-          flex: 0 0 100%;
-        }
-        img {
-          height: 150px; // Ajuste de altura para móviles
-        }
-      }
-    }
-  }
+       a {
+         flex: 0 0 50%;
+       }
+       img{
+         display: flex;
+         width: 100%;
+         max-height: 80vh;
+         height: auto;
+         object-fit: cover;
+         margin: 2em;
+       } 
+     } 
+   }
 
   // ====================
   // Revista
@@ -224,12 +230,9 @@ $colorFondo:#fff;
           display: flex;
           transition: transform 0.5s ease;
         }
-        
-        
         .grande a {
           margin: 0 0.5em; /* Espacio horizontal entre imágenes */
         }
-        
         .grande img {
           width: 100%; 
           height: auto; 
@@ -259,54 +262,7 @@ $colorFondo:#fff;
   
   }
   
-  //borrar
-  .revista-item {
-    position: relative;
-    overflow: hidden;
-    height: 300px; // Ajusta según necesites
-    padding: 0;
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      display: block;
-    }
-  
-    .revista-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(225, 18, 18, 0.353);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-  
-      span {
-        color: rgb(10, 7, 7);
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-    }
-    //borrar hasta aca 
-    .revista-link {
-      color: inherit;
-    }
-    
-    &:hover {
-      .revista-overlay {
-        opacity: 1;
-      }
-      img {
-        animation: jello-horizontal 1.9s linear both;
-      }
-    }
-  }
+ 
   
   // ====================
   // Comunidad
@@ -372,7 +328,7 @@ $colorFondo:#fff;
     -webkit-text-fill-color: transparent;
   }
   // ====================
-  // General Styles
+  // BODY y general
   // ====================
   body {
     font-family: "Gentium Book Plus", serif;
@@ -396,12 +352,24 @@ $colorFondo:#fff;
       padding: 1%;
       margin-bottom:0 ;
     }
-    .banner{
-      justify-content: center;
-      text-align: center;
-    }
+    .banner {
+      img.banner-img {
+        width: 100%;
+        height: auto;
+      }
     
+      @media (min-width: 360px) and (max-width: 900px){
+        img.banner-img {
+          width: 100% !important;
+          padding-top: 100px !important;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
   }
+  
+  
   
   button {
     font-family: "Gentium Book Plus", serif;
@@ -422,7 +390,6 @@ $colorFondo:#fff;
     text-align: center;
   
   }
-  
   // Contenedor del h2
   h2 {
     box-sizing: border-box;
@@ -461,13 +428,7 @@ $colorFondo:#fff;
     margin: 0;
     padding: 0;
   }
-  
-  // ====================
-  // Hero Section
-  // ====================
-  
- 
-  
+
   // ====================
   // newsletter
   // ====================
@@ -478,8 +439,6 @@ $colorFondo:#fff;
     position: relative;
     z-index: 1;
   }
-
-  
   // ====================
   // Footer
   // ====================
